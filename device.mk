@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/samsung/a52sxq
+DEVICE_PATH := device/samsung/a73xq
 
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
@@ -22,11 +22,11 @@ DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 $(call inherit-product, device/samsung/sm7325-common/common.mk)
 
 # call the proprietary setup
-$(call inherit-product, vendor/samsung/a52sxq/a52sxq-vendor.mk)
+$(call inherit-product, vendor/samsung/a73xq/a73xq-vendor.mk)
 
 # Init files
 PRODUCT_PACKAGES += \
-    init.a52sxq.rc
+    init.a73xq.rc
 
 # Audio
 PRODUCT_COPY_FILES += \

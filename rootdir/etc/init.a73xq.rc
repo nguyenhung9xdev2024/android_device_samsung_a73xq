@@ -105,7 +105,7 @@ on init
 on boot
 # SDHMS Slowdown : Cpuset
     mkdir /dev/cpuset/abnormal
-    write /dev/cpuset/abnormal/cpus 0-3
+    write /dev/cpuset/abnormal/cpus 0-2
     copy /dev/cpuset/mems /dev/cpuset/abnormal/mems
 
     chown system system /dev/cpuset/abnormal
@@ -154,6 +154,16 @@ service heimdalld /system/bin/heimdalld
     oneshot
 
 # SSU (Samsung SIM Unlock)
+on property:ro.boot.carrierid=VZW
+    setprop ssu.support 1
+on property:ro.boot.carrierid=CCT
+    setprop ssu.support 1
+on property:ro.boot.carrierid=TMB
+    setprop ssu.support 1
+on property:ro.boot.carrierid=TMK
+    setprop ssu.support 1
+on property:ro.boot.carrierid=USC
+    setprop ssu.support 1
 on property:ro.boot.carrierid=MXO
     setprop ssu.support 1
 
@@ -173,3 +183,9 @@ on post-fs-data && property:ro.csc.sales_code=TMB
 
 on property:sys.sysctl.zram_balance_ratio=*
     write /sys/module/zram/parameters/zram_balance_ratio ${sys.sysctl.zram_balance_ratio}
+
+# Remosaic daemon works with cameraserver
+service remosaic_daemon /vendor/bin/remosaic_daemon
+    class core
+    user camera
+    group camera

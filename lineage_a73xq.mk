@@ -15,7 +15,7 @@
 #
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/a52sxq/device.mk)
+$(call inherit-product, device/samsung/a73xq/device.mk)
 
 # Inherit from the 64 bit configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -34,15 +34,15 @@ TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_a52sxq
-PRODUCT_DEVICE := a52sxq
+PRODUCT_NAME := lineage_a73xq
+PRODUCT_DEVICE := a73xq
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-A528B
+PRODUCT_MODEL := SM-A736B
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Vendor fingerprint
-BUILD_FINGERPRINT := "samsung/a52sxqxx/a52sxq:11/RP1A.200720.012/A528BXXU2EWC1:user/release-keys"
-PRIVATE_BUILD_DESC := "a52sxqxx-user 11 RP1A.200720.012 A528BXXU2EWC1 release-keys"
+BUILD_FINGERPRINT := "samsung/a73xqxx/a73xq:11/RP1A.200720.012/A736BXXU3CWB7:user/release-keys"
+PRIVATE_BUILD_DESC := "samsung/a73xqxx/a73xq:11/RP1A.200720.012/A736BXXU3CWB7:user/release-keys"
