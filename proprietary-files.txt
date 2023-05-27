@@ -239,6 +239,12 @@ vendor/firmware/yupik_ipa_fws.b04
 vendor/firmware/yupik_ipa_fws.elf
 vendor/firmware/yupik_ipa_fws.mdt
 
+# NFC
+vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
+
+# NFC configs
+vendor/etc/libnfc-nxp_RF.conf:vendor/libnfc-nxp_RF.conf
+
 # Sensors
 vendor/etc/sensors/config/kodiak_icm4x6xx_0.json
 vendor/etc/sensors/config/kodiak_stk3a0x_0.json
